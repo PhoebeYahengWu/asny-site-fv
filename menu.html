@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Table UI</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="font-awesome-animation.min.css">
+
+  <style>
+    .btn-lg {
+    width: 250px;
+    display: inline-block;
+    } 
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;  
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #eee;
+    height: auto;
+}
+
+li a {
+    color: #212529 !important;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+}
+.nav-wrapper {
+  background: #eeeeee;
+}
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+h6 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin: 0;
+    color:#fff;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
+        -30px 0px 40px rgba(0,0,0,0.1);
+}
+
+#landing {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://cdn.glitch.com/f28949c6-6f44-4abb-a9a1-6a9e90371a91%2Fimage-2.jpeg?v=1588452603431");
+}
+
+
+#landing-2 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://cdn.glitch.com/f28949c6-6f44-4abb-a9a1-6a9e90371a91%2Fimg15.jpeg?v=1588729605702");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  flex: 0 1 60 vw;
+  margin: 0;
+}
+
+#landing-3 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 0 1 60 vw;
+  margin: 0; 
+}
+
+#landing-text {
+    display: flex;
+    flex: 0 1 50vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+#landing-text h2 {
+    color: #888;
+}
+
+
+.btn {
+    padding: 0.5rem 2rem !important;
+    border: 1px #ccc solid !important;
+    display: inline-block !important;
+    margin: 2rem 0 0 !important;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff !important;
+    background: transparent !important;
+    transition: background 500ms ease;
+    height: 100% !important;
+    line-height: 100% !important;
+}
+
+.btn:hover {
+    background: #f4f4f4 !important;
+    color:#000 !important;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#header {
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+#header h2 {
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.caption {
+    padding: 0.8rem;
+    text-align: justify;
+}
+
+
+footer {
+    text-align: center;
+    margin: auto;
+    color: #333;
+}
+
+footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+@media(min-width: 500px) {
+    #landing {
+        display: flex;
+        height: 100%;
+    }
+
+    #landing-text {
+        height: 100vh;
+    }
+}
+
+@media(min-width: 700px) {
+    .btn {
+        padding: 1rem 3rem !important;
+    }
+}
+  </style>
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper">
+          <div class="container">
+              <a href="#" class="brand-logo" id="logo" style="color: #212529; font-size: 1.2rem;"><img style="margin-right: 5px;" width="35px" src="https://cdn.glitch.com/cd99f035-ecbc-4ddd-9a8c-d2f6b5fff534%2Funnamed.jpg?v=1598063913377"></a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                  <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li class="myNav"><a href="index.html">Home</a></li>
+                <li class="myNav"><a href="service.html">Services</a></li>
+                <li class="myNav"><a href="about.html">Our Team</a></li>
+                <li class="myNav"><a href="client.html">Clients</a></li> 
+                <li class="myNav"><a href="contact.html">Contact</a></li> 
+              </ul>
+          </div>
+      </nav>
+    </div>
+      <ul class="sidenav" id="mobile-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li> 
+        <li><a href="client.html">Clients</a></li> 
+        <li><a href="contact.html">Contact</a></li> 
+      </ul>
+
+  <main>
+    <!-- Landing Area -->
+    <div id="landing">
+        <div id="landing-text">
+            <div id="landing-text-inner">
+                <h1>Accounting Solutions of New York</h1>
+                <h6>we specialize in accounting and CFO services to nonprofit organizations</h6>
+                <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="images">
+        <div id="header">
+            <h2 style="margin: 1rem 0 1rem 0">About Us</h2>
+        </div>
+
+        <div class="caption">
+            <p>ASNY is a New York based accounting firm that specializes in providing quality accounting, financial reporting and best practices services to nonprofit organizations and charter schools. Our firm prides itself on its record for consistently providing solutions to accounting issues clients face. Be it simple or complex, we adopt a collaborate approach to understanding the issue and to produce an individualized solution – no short cuts.
+               <br/><br/> We offer Bookkeeping, Financial Reporting, Audit Preparation, Budgeting and Forecasting, Accounting Software Setup and Maintenance, Chart of Accounts Design, Chief Financial Officer, Internal Controls Design, and Regulatory Compliance 
+
+                <br/><br/>Our services are available on a full-time or part-time basis.
+
+                <br/><br/> Our Mission is, "To ease the burden of accounting, record keeping, and fiscal reporting so that administrators can focus on program achievement."
+
+                <br/><br/>ASNY takes the drudgery out of accounting chores. Our technical expertise combined with more than 25 years of focused accounting and auditing experience enables us to relieve you of time-consuming tasks while assuring accuracy and timeliness of financial data, and adherence to the compliance calendar.  In addition, we empower you with the financial tools needed to make the right decisions.
+              
+                <br/><br/>Maintaining a well-run nonprofit organization carries with it a myriad of record keeping and accounting challenges, all of which need to be managed effectively to ensure that reporting and compliance requirements are met. These financial administrative tasks may distract managers and decision makers from their primary focus of serving the organization's mission. That's where ASNY can help.
+            </p>
+        </div>
+    </div>
+ 
+
+        <div id="landing-2">
+          <div id="landing-text">
+              <div id="landing-text-inner">
+                  <a href="#landing-3" class="btn" id="view-work">What We Offer</a>
+              </div>
+          </div>
+      </div>
+
+      <div id="landing-3">
+        <div id="header">
+          <h2 style="margin: 1rem 0 1rem 0">What We Offer</h2>
+      </div>
+        <div class="container p-0 mb-5"> 
+ 
+            <div class="row mt-4">
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+                  <i class="fas fa-4x fa-laptop faa-pulse"></i>
+                  <p class="mt-3">Bookkeeping</p>
+                </div>
+      
+        
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+                  <i class="far fa-4x fa-newspaper faa-horizontal"></i>
+                  <p class="mt-3">Financial Reporting</p>
+                </div>
+
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+        
+                  <i class="far fa-4x fa-calendar-check faa-float"></i>
+                  <p class="mt-3">Audit Preparation</p>
+                </div>
+              </div>
+
+              <div class="row mt-1 pt-1">
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+                  <i class="fas fa-4x fa-poll faa-shake"></i>
+        
+                  <p class="mt-3">Budgeting and Forecasting</p>
+                </div>
+        
+                <div class="col-sm-4 text-center faa-parent animated-hover"> 
+                  <i class="fas fa-4x fa-cogs faa-tada"></i>
+                  <p class="mt-3">Accounting Software Setup and Maintenance</p>
+                </div>
+        
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+                  <i class="fas fa-4x fa-pen-square faa-spin"></i> 
+                  <p class="mt-3">Chart of Accounts Design</p>
+                </div>
+              </div>
+
+              <div class="row mt-1 pt-1 pb-4">
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+                  <i class="fas fa-4x fa-calculator faa-ring"></i>
+                  <p class="mt-3">Chief Financial Officer</p>
+                </div>
+        
+                <div class="col-sm-4 text-center faa-parent animated-hover"> 
+                  <i class="fas fa-4x fa-user-shield faa-pulse"></i>
+                  <p class="mt-3">Internal Controls Design</p>
+                </div>
+        
+                <div class="col-sm-4 text-center faa-parent animated-hover">
+                  <i class="fas fa-4x fa-gavel faa-spin"></i>
+                  <p class="mt-3">Regulatory Compliance</p>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      
+
+
+
+    </div>
+</main>
+
+
+
+
+
+
+  <footer class="pb-4">
+    <h3 style="margin:0px">Get In Touch</h3>
+    <p>Email or call us to schedule an appointment</p>
+    <p>Email: <strong>dbahl@asnyinc.com</strong></p>
+    <p>Phone: <strong>917-620-9702</strong></p>
+</footer>
+
+  <!-- Custom Script -->
+  <script src="js/view.js" type="text/javascript"></script>
+ <script>
+       $(document).ready(function(){
+      $('.sidenav').sidenav();
+  });
+ </script>
+</body>
+
+</html>
