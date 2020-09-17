@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Table UI</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="font-awesome-animation.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <style>
+
+.contacthero{
+    position:relative;
+    height:45vh !important;
+    width:100%;
+    height:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://cdn.glitch.com/e7ec1ecc-8235-4381-8966-9202576ad0f6%2Fcontact.jpeg?v=1598226713402');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center bottom;
+    z-index: -1;
+}
+
+#mapid { 
+    height: 200px; 
+}
+
+.address,
+#mapid {
+    margin-left: 3rem !important;
+    padding-left: 3rem !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .address,
+    #mapid {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+  }
+    .btn-lg {
+    width: 250px;
+    display: inline-block;
+    } 
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;  
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #eee;
+    height: auto;
+}
+
+li a {
+    color: #212529 !important;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+}
+.nav-wrapper {
+  background: #eeeeee;
+}
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+h6 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin: 0;
+    color:#fff;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
+        -30px 0px 40px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+#header {
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+#header h2 {
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.caption {
+    padding: 0.8rem;
+    text-align: justify;
+}
+
+
+footer {
+    text-align: center;
+    margin: auto;
+    color: #333;
+}
+
+footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.servicehero{
+    position:relative;
+    height:45vh !important;
+    width:100%;
+    height:100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://cdn.glitch.com/e7ec1ecc-8235-4381-8966-9202576ad0f6%2Fservice.jpeg?v=1598296190289');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center top;
+    z-index: -1;
+  }
+
+  #exTab2 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper">
+          <div class="container">
+              <a href="#" class="brand-logo" id="logo" style="color: #212529; font-size: 1.2rem;"><img style="margin-right: 5px;" width="35px" src="https://cdn.glitch.com/cd99f035-ecbc-4ddd-9a8c-d2f6b5fff534%2Funnamed.jpg?v=1598063913377"></a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                  <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li class="myNav"><a href="index.html">Home</a></li>
+                <li class="myNav"><a href="service.html">Services</a></li>
+                <li class="myNav"><a href="team.html">Our Team</a></li>
+                <li class="myNav"><a href="client.html">Clients</a></li> 
+                <li class="myNav"><a href="contact.html">Contact</a></li> 
+              </ul>
+          </div>
+      </nav>
+    </div>
+      <ul class="sidenav" id="mobile-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html">Services</a></li> 
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="client.html">Clients</a></li> 
+        <li><a href="contact.html">Contact</a></li> 
+      </ul>
+
+  <main>
+    <!-- Landing Area -->
+
+      
+    <div class="contacthero">
+
+      <div class="container-fluid">
+        <div class="row text-center justify-content-center mb-0 pb-4 pt-5">
+       
+        <h3 class="caption" style="line-height: 2.3em; font-weight: 500;color: #eee;">CONTACT US</h3>
+
+    </div>
+</div>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-between mt-5 mb-5">     
+          <div class="col-md-12">
+         
+              <form id="contact-form">
+              <div class="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input class="form-control" type="text" name="user_name"/>
+              </div>
+              <div class="form-group">
+                  <label htmlFor="exampleInputEmail1" >Email address</label>
+                  <input type="email" class="form-control" aria-describedby="emailHelp" name="user_email"/>
+              </div>
+              <div class="form-group">
+                  <label htmlFor="message" >Message</label>
+                  <textarea class="form-control" rows="5" name="message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-block #212121 grey darken-4">Submit</button>
+              </form>
+              </div>
+      </div>
+    </div>
+  
+ 
+          <div id="header">
+            <h5 style="padding-top: 1rem;">We are Located in the Heart of Midtown</h5>
+            <hr/>
+        </div>
+
+
+        <div class="row pb-3">
+          <div class="col-md-7">
+      
+            <div id="mapid"></div>
+  
+          </div>
+      
+          <div class="col-md-5">
+      
+  
+  
+            <div class="caption">
+              <p class="address">42 West 38th Street, Suite 705<br/><br/>
+  
+                New York, NY 10018<br/><br/>
+                
+                Tel # 917-620-9702<br/><br/>
+                
+                Email: dbahl@asnyinc.com</p>
+          </div>
+            
+          </div>
+        </div>
+        
+    
+
+
+
+ 
+    
+</main>
+
+
+
+
+
+
+  <footer class="pb-4">
+    <h3 style="margin:0px">Get In Touch</h3>
+    <p>Email or call us to schedule an appointment</p>
+    <p>Email: <strong>dbahl@asnyinc.com</strong></p>
+    <p>Phone: <strong>917-620-9702</strong></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+ <script>
+       $(document).ready(function(){
+      $('.sidenav').sidenav();
+  });
+
+
+  var mymap = L.map('mapid').setView([40.751580, -73.984790], 15);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox/streets-v11',
+  tileSize: 512,
+  zoomOffset: -1,
+  accessToken: 'pk.eyJ1Ijoic3RhcmR1c3QxOTEiLCJhIjoiY2thNjMzZzdlMDNtdTJ6bWptaTFqa3Y2MSJ9.VIX2KRmemtC5qDAMyL9Jug'
+}).addTo(mymap);
+
+var marker = L.marker([40.751580, -73.984790]).addTo(mymap);
+
+marker.bindPopup("<b>42 W 38th St</b><br>42 W 38th St, New York, NY 10018.").openPopup();
+ </script>
+</body>
+
+</html>
