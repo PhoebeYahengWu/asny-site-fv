@@ -67,7 +67,6 @@ h6 {
 
 main {
     width: 100%;
-    /* max-width: 1000px; */
     margin: auto;
     box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
         -30px 0px 40px rgba(0,0,0,0.1);
@@ -180,7 +179,9 @@ footer h3 {
     }
 }
 
-
+#landing {
+  position: relative;
+}
 
 .mySlides {
   width: 100%;
@@ -252,13 +253,13 @@ footer h3 {
       </ul>
 
   <main>
-    <section id="landing">
+    <section id="landing" class="100vh">
       <div class="mySlides myDiv"><p id="slide1text">
         <div id="landing-text">
           <div id="landing-text-inner">
               <h1 class="mt-4 pt-4">Accounting Solutions of New York</h1>
               <h6>we specialize in accounting and CFO services to nonprofit organizations</h6>
-              <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+              <a href="#aboutus" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
           </div>
       </div> 
       </div>
@@ -267,7 +268,7 @@ footer h3 {
           <div id="landing-text-inner">
         <h1 class="mt-4 pt-4">Our client’s success is our goal</h1>
         <h6>we specialize in accounting and CFO services to nonprofit organizations</h6>
-        <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+        <a href="#aboutus" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
       </div>
     </div>  
       </p></div>
@@ -278,7 +279,7 @@ footer h3 {
           <div id="landing-text-inner">
             <h1 class="mt-4 pt-4">Accounting Solutions of New York</h1>
         <h6>We understand how nonprofits and charter schools work and we can help</h6>
-        <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+        <a href="#aboutus" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
       </div>  
     </div>
       
@@ -286,7 +287,8 @@ footer h3 {
       </div>
     </section>
 
-    <div id="images">
+<section class="100vh" id="aboutus" style="margin-top: 100vh;">
+  
         <div id="header">
             <h2 style="margin: 1rem 0 1rem 0">About Us</h2>
         </div>
@@ -305,7 +307,8 @@ footer h3 {
             </p>
           </div>
         </div>
-    </div>
+
+  </section>
  
 
         <div id="landing-2">
