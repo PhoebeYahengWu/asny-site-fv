@@ -73,10 +73,6 @@ main {
         -30px 0px 40px rgba(0,0,0,0.1);
 }
 
-#landing {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://cdn.glitch.com/f28949c6-6f44-4abb-a9a1-6a9e90371a91%2Fimage-2.jpeg?v=1588452603431");
-}
-
 
 #landing-2 {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://cdn.glitch.com/f28949c6-6f44-4abb-a9a1-6a9e90371a91%2Fimg15.jpeg?v=1588729605702");
@@ -185,6 +181,46 @@ footer h3 {
 }
 
 
+
+.mySlides {
+  width: 100%;
+  height: 100vh;
+  background: rgb(50,50,50); 
+  opacity: 1;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center top;
+  background-size: cover;
+}
+
+.fadeOut {
+  opacity: 0;
+  z-index: -1;
+}
+
+
+.myDiv {
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+
+
+
+.mySlides:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://cdn.glitch.com/0cc91850-cd5e-4827-a102-0ddee1243509%2Fbuilding.jpeg?v=1600625925327");
+  }
+
+.mySlides:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://cdn.glitch.com/e0d8759f-eec0-4400-be76-d79eddbf1da8%2F4.jpeg?v=1599192990736");
+  }
+
+.mySlides:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://cdn.glitch.com/0cc91850-cd5e-4827-a102-0ddee1243509%2Fnew.jpeg?v=1600626752013");
+  }
+
   </style>
 </head>
 
@@ -216,16 +252,39 @@ footer h3 {
       </ul>
 
   <main>
-    <!-- Landing Area -->
-    <div id="landing">
+    <section id="landing">
+      <div class="mySlides myDiv"><p id="slide1text">
         <div id="landing-text">
-            <div id="landing-text-inner">
-                <h1>Accounting Solutions of New York</h1>
-                <h6>we specialize in accounting and CFO services to nonprofit organizations</h6>
-                <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
-            </div>
-        </div> 
+          <div id="landing-text-inner">
+              <h1 class="mt-4 pt-4">Accounting Solutions of New York</h1>
+              <h6>we specialize in accounting and CFO services to nonprofit organizations</h6>
+              <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+          </div>
+      </div> 
+      </div>
+      <div class="mySlides myDiv"><p id="slide2text">
+        <div id="landing-text">
+          <div id="landing-text-inner">
+        <h1 class="mt-4 pt-4">Our client’s success is our goal</h1>
+        <h6>we specialize in accounting and CFO services to nonprofit organizations</h6>
+        <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+      </div>
+    </div>  
+      </p></div>
+
+
+      <div class="mySlides myDiv"><p id="slide3text">
+        <div id="landing-text">
+          <div id="landing-text-inner">
+            <h1 class="mt-4 pt-4">Accounting Solutions of New York</h1>
+        <h6>We understand how nonprofits and charter schools work and we can help</h6>
+        <a href="#images" class="btn" style="padding: 0.5rem 2rem" id="view-work">About Us</a>
+      </div>  
     </div>
+      
+      </p>
+      </div>
+    </section>
 
     <div id="images">
         <div id="header">
@@ -336,7 +395,44 @@ footer h3 {
  <script>
        $(document).ready(function(){
       $('.sidenav').sidenav();
-  });
+  }); 
+
+
+  var carousel = {
+  target: ".mySlides",
+  autoPlay: true,
+  currentIndex: 0,
+  length: null,
+  slideChangeSpeed: 3000,
+  changeSlide: function() {
+    var target = document.querySelectorAll(this.target);
+    var targetLength = target.length;
+    this.length = target.length;
+    for (var i = 0; i < targetLength; i++) {
+      target[i].classList.add("fadeOut"); // hide all elements
+
+      if (i == this.currentIndex) {
+        target[i].classList.remove("fadeOut"); // remove the hidden class (showing the current index item)
+      }
+    }
+    this.updateIndex(); // update the slide index 
+  },
+  updateIndex: function() {
+    this.currentIndex >= this.length - 1 ? (this.currentIndex = 0) : (this.currentIndex = this.currentIndex + 1);
+  }
+};
+
+// initial run
+carousel.changeSlide();
+
+
+// continous setInterval if carousel is set to autoplay
+if (carousel.autoPlay) {
+  setInterval(function() {
+    carousel.changeSlide();
+  }, carousel.slideChangeSpeed);
+}
+
 
 
  </script>
