@@ -84,9 +84,11 @@ a:hover {
   outline: none;
   color: #fff;
 }
+
 .nav-wrapper {
   background: #eeeeee;
 }
+
 h1 {
     font-weight: 400;
     font-size: 2.5rem;
@@ -104,7 +106,6 @@ h6 {
 }
 
 main {
-    /* max-width: 1000px; */
     width: 100%; 
     margin: auto;
     box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
@@ -302,7 +303,6 @@ footer h3 {
   var mymap = L.map('mapid').setView([40.751580, -73.984790], 15);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
   maxZoom: 18,
   id: 'mapbox/streets-v11',
   tileSize: 512,
