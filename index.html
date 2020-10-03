@@ -36,7 +36,7 @@
     } 
 
     @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 html {
   margin: 0 !important;
   padding: 0 !important;  
@@ -129,8 +129,7 @@ main {
     color: #fff !important;
     background: transparent !important;
     transition: background 500ms ease;
-    height: 100% !important;
-    line-height: 100% !important;
+    line-height: 50% !important;
 }
 
 .btn:hover {
@@ -141,6 +140,17 @@ main {
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.learnMorebtn {
+  border-radius: 0px;
+  border: 1px #0C5283 solid !important;
+  color: #0C5283 !important;
+}
+
+.learnMorebtn:hover {
+  background-color: #0C5283 !important;
+  color: #fff !important;
 }
 
 #header {
@@ -310,14 +320,31 @@ footer h3 {
 
         <div class="caption">
           <div class="container-fluid">
-          <br/><p>ASNY is a New York based accounting firm that specializes in providing quality accounting, financial reporting and best practices services to nonprofit organizations and charter schools. Our firm prides itself on its record for consistently providing solutions to accounting issues clients face. Be it simple or complex, we adopt a collaborate approach to understanding the issue and to produce an individualized solution – no short cuts.
-               <br/><br/> We offer Bookkeeping, Financial Reporting, Audit Preparation, Budgeting and Forecasting, Accounting Software Setup and Maintenance, Chart of Accounts Design, Chief Financial Officer, Internal Controls Design, and Regulatory Compliance 
 
-                <br/><br/>Our services are available on a full-time or part-time basis.
 
-                <br/><br/>ASNY takes the drudgery out of accounting chores. Our technical expertise combined with more than 25 years of focused accounting and auditing experience enables us to relieve you of time-consuming tasks while assuring accuracy and timeliness of financial data, and adherence to the compliance calendar.  In addition, we empower you with the financial tools needed to make the right decisions.
-              
-            </p>
+            <div class="row mt-5">
+
+              <div class="col-md-4 text-center faa-parent animated-hover">
+                <i class="fas fa-4x fa-user-tie faa-pulse"></i>
+                <h4 class="text-center" style="font-family: 'Playfair Display', serif;">Who We Are</h4>
+                <p>Accounting Solutions of New York is a New York based accounting firm that prides itself on its record for consistently providing solutions to accounting issues clients face with more than 25 years of focused accounting and auditing experience.</p>
+                <a href="https://www.asnyinc.com/team" class="btn learnMorebtn" stlye="height: 20px">Learn More</a>
+              </div>
+
+              <div class="col-md-4 text-center faa-parent animated-hover">
+                <i class="fas fa-4x fa-chart-line faa-pulse"></i> 
+                <h4 class="text-center" style="font-family: 'Playfair Display', serif;">What We Do</h4>
+                <p>We offer Bookkeeping, Financial Reporting, Audit Preparation, Budgeting and Forecasting, Accounting Software Setup and Maintenance, Chart of Accounts Design, Chief Financial Officer, Internal Controls Design, and Regulatory Compliance.</p>
+                <a href="#whatweoffer" class="btn learnMorebtn" stlye="height: 20px">Learn More</a>
+              </div>
+
+              <div class="col-md-4 text-center faa-parent animated-hover">  
+                <i class="fas fa-4x fa-users faa-pulse"></i>
+                <h4 class="text-center" style="font-family: 'Playfair Display', serif;">Who We Serve</h4>
+                <p>At Accounting Solutions of New York, we focus on meeting the needs of nonprofit organizations and charter schools. We offer services on a full-time or part-time basis and empower clients with the financial tools needed to make the right decisions.</p>
+                <a href="https://www.asnyinc.com/service" class="btn learnMorebtn" stlye="height: 20px">Learn More</a>
+              </div>
+            </div>
           </div>
         </div>
 
